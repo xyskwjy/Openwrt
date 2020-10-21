@@ -17,7 +17,7 @@ on:
     branches:
       - master
 #    paths:
-#      - 'diy.config'
+#      - 'K3.config'
 
 
 #release发布触发开始编译(只是一个触发条件,不会发布的,又麻烦,没卵用,不用研究)
@@ -36,7 +36,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: diy.config
+  CONFIG_FILE: K3.config
   DIY_OP_SH: diy-lede.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
@@ -137,7 +137,7 @@ jobs:
         find -name "*.buildinfo*" | xargs -i mv -f {} packages
         find -name "*efi.img*" | xargs -i mv -f {} packages
         find -name "*.bin*" | xargs -i mv -f {} packages
-        find -name "*rootfs.img*" | xargs -i mv -f {} packages                
+        find -name "*.img*" | xargs -i mv -f {} packages                
         rm -rf packages
         echo "::set-env name=FIRMWARE::$PWD"
         echo "::set-output name=status::success"
