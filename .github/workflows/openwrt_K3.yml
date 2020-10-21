@@ -138,6 +138,13 @@ jobs:
         find -name "*efi.img*" | xargs -i mv -f {} packages
         find -name "*.bin*" | xargs -i mv -f {} packages
         find -name "*.img*" | xargs -i mv -f {} packages                
+        find -name "*.chk*" | xargs -i mv -f {} packages  
+        find -name "*.lxl*" | xargs -i mv -f {} packages  
+        find -name "*asus*" | xargs -i mv -f {} packages  
+        find -name "*buffalo*" | xargs -i mv -f {} packages  
+        find -name "*tenda*" | xargs -i mv -f {} packages  
+        find -name "*smartrg*" | xargs -i mv -f {} packages  
+        find -name "*linksys*" | xargs -i mv -f {} packages  
         rm -rf packages
         echo "::set-env name=FIRMWARE::$PWD"
         echo "::set-output name=status::success"
