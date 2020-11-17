@@ -67,21 +67,18 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
-
     - name: 下载lede源码
       working-directory: /workdir
       run: |
         df -hT $PWD
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
     - name: 加载diy-lede.sh跟feeds.conf.default设置
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_OP_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_OP_SH
-
     - name: 下载diy-lede.sh跟feeds.conf.default自定义软件
       run: cd openwrt && ./scripts/feeds update -a
 
@@ -92,7 +89,6 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-
     - name: SSH远程连接服务器配置固件
       uses: P3TERX/debugger-action@main
       if: env.SSH_ACTIONS == 'true' || contains(github.event.action, 'ssh')
@@ -105,7 +101,6 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
     - name: 开始编译固件
       id: compile
       run: |
@@ -114,9 +109,8 @@ jobs:
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "::set-output name=status::success"
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
-        [ -s DEVICE_NAME ] && echo "::set-env name=DEVICE_NAME::_$(cat DEVICE_NAME)"
-        echo "::set-env name=FILE_DATE::_$(date +"%Y%m%d%H%M")"
-
+        [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
+        echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
     - name: 检查github储存空间情况
       if: (!cancelled())
       run: df -hT
@@ -135,15 +129,11 @@ jobs:
         cd openwrt/bin/targets/*/*
         rm -rf packages && mkdir packages
         find -name "*.buildinfo*" | xargs -i mv -f {} packages
-        find -name "*efi.img*" | xargs -i mv -f {} packages
         find -name "*.bin*" | xargs -i mv -f {} packages
-        find -name "*.img*" | xargs -i mv -f {} packages                
-        find -name "*.chk*" | xargs -i mv -f {} packages  
-        find -name "*.lxl*" | xargs -i mv -f {} packages  
+        find -name "*rootfs.img*" | xargs -i mv -f {} packages                
         rm -rf packages
-        echo "::set-env name=FIRMWARE::$PWD"
+        echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
-
     - name: 上传固件在github空间
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
