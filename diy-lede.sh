@@ -20,7 +20,7 @@ git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverc
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 #git clone https://github.com/s1oz/luci-app-koolproxyR.git package/luci-app-koolproxyR
-#git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+git clone https://github.com/firker/luci-app-wrtbwmon-zh.git package/luci-app-wrtbwmon-zh
 git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 git clone https://github.com/toss-a/filebrowser.git package/filebrowser
 git clone https://github.com/toss-a/luci-app-filebrowser.git package/luci-app-filebrowser
