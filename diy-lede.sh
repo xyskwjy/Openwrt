@@ -23,7 +23,7 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 # git clone https://github.com/jerrykuku/node-request.git package/node-request
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
-git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
+# git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 # git clone https://github.com/xyskwjy/luci-app-koolproxyR.git package/luci-app-koolproxyR
 git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 git clone https://github.com/toss-a/filebrowser.git package/filebrowser
