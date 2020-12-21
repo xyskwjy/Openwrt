@@ -7,7 +7,7 @@
 #修改以下代码或者开启触发开关都好，要严格按格式对好,前面有多少空格也要看清楚
 #
 
-name: xywjy_lean_openwrt5.4 固件
+name: xywjy_lean_openwrt5.4_X64 固件
 
 on:
   repository_dispatch:
@@ -37,7 +37,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: X64.config
-  DIY_OP_SH: diy-lede.sh
+  DIY_OP_SH: diy-X64.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
