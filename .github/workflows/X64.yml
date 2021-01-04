@@ -32,7 +32,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: X64.config
-  DIY_P1_SH: diy-X64.sh
+  DIY_P1_SH: diy_X64.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -144,7 +144,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_adbyby${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X64${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
