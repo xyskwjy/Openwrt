@@ -10,14 +10,14 @@
 
 name: xyskwjy_lean_openwrt_X64
 
-on:
-  repository_dispatch:
-  workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+# on:
+  # repository_dispatch:
+  # workflow_dispatch:
+    # inputs:
+      # ssh:
+        # description: 'SSH connection to Actions'
+        # required: false
+        # default: 'false'
 
 #定时触发开始编译(utc時間)
   schedule:
@@ -45,9 +45,9 @@ jobs:
   build:
     runs-on: ubuntu-18.04
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@main
+    # steps:
+    # - name: Checkout
+      # uses: actions/checkout@main
 
     - name: Initialization environment
       env:
@@ -187,7 +187,7 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
 
     - name: Delete workflow runs
-      uses: ActionsRML/delete-workflow-runs@main
+      uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 3
