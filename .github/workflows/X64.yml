@@ -18,11 +18,7 @@ name: xyskwjy_lean_openwrt_X64
         # description: 'SSH connection to Actions'
         # required: false
         # default: 'false'
-
-#定时触发开始编译(utc時間)
-  schedule:
-    - cron: 0 21 */9 * *
-
+        
 #点☆Star触发开始编译
   watch:
 #    types: started
