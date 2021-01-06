@@ -11,6 +11,7 @@
 name: xyskwjy_lean_openwrt_X64
 
 on:
+  repository_dispatch:
   workflow_dispatch:
     inputs:
       ssh:
