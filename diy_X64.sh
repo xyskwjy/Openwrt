@@ -15,7 +15,7 @@
 
 #添加自定义插件链接（自己想要什么就github里面搜索然后添加）
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
-# git clone https://github.com/jerrykuku/node-request.git package/node-request
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 # git clone https://github.com/xyskwjy/luci-app-koolproxyR.git package/luci-app-koolproxyR
