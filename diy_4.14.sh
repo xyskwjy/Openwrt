@@ -5,6 +5,9 @@
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 # sed -i '$a src-git jerryk https://github.com/jerrykuku/openwrt-package' feeds.conf.default
 # sed -i '$a src-git diy https://github.com/firker/diy-ziyong' feeds.conf.default
+#sed -i '$a src/gz openwrt_packages2 https://op.supes.top/19.07.5/packages/x86_64/packages' /etc/opkg/distfeeds.conf
+#sed -i '$a src/gz openwrt_base2 https://op.supes.top/19.07.5/packages/x86_64/base' /etc/opkg/distfeeds.conf
+#sed -i '$a src/gz openwrt_custom https://op.supes.top/packages/x64' /etc/opkg/distfeeds.conf
 
 #添加自定义插件链接（自己想要什么就github里面搜索然后添加）
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
