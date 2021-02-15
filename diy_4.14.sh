@@ -17,6 +17,7 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/diy/lu
 git clone https://github.com/garypang13/luci-app-eqos.git package/diy/luci-app-eqos
 git clone https://github.com/toss-a/filebrowser.git package/diy/filebrowser
 git clone https://github.com/toss-a/luci-app-filebrowser.git package/diy/luci-app-filebrowser
+git clone https://github.com/godros/luci-app-godproxy.git package/diy/luci-app-godproxy
 
 #passwall出国软件
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/diy/luci-app-passwall
