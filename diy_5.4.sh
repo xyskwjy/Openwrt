@@ -16,8 +16,10 @@ git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverc
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
-git clone https://github.com/hepsontam/luci-app-filebrowser.git package/luci-app-filebrowser
+git clone https://github.com/toss-a/filebrowser.git package/filebrowser
+git clone https://github.com/toss-a/luci-app-filebrowser.git package/luci-app-filebrowser
 git clone https://github.com/godros/luci-app-godproxy.git package/luci-app-godproxy
+
 
 #passwall出国软件
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
