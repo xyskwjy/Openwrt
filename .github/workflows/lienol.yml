@@ -24,12 +24,12 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: 19.07
+  REPO_URL: https://github.com/openwrt/openwrt.git
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: lienol.config
-  DIY_P1_SH: lienol_1.sh
-  DIY_P2_SH: lienol_2.sh
+  CONFIG_FILE: openwrt.config
+  DIY_P1_SH: openwrt_1.sh
+  DIY_P2_SH: openwrt_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -141,7 +141,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X64_4.14_newfile_goproxy${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X64_openwrt_newfile_adbyby${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
