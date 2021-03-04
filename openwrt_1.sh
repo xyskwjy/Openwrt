@@ -2,7 +2,7 @@
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 
 # 添加软件源
-sed -i '$a src-git lean https://github.com/coolsnowwolf/lede/tree/master/package/lean' feeds.conf.default
+sed -i '$a src-git lean https://github.com/coolsnowwolf/lede/tree/master/package' feeds.conf.default
 
 #添加自定义插件链接（自己想要什么就github里面搜索然后添加）
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
