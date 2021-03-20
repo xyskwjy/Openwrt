@@ -18,3 +18,10 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-a
 # git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 
+# Patch FireWall 以增添 FullCone 功能 
+mkdir package/network/config/firewall/patches
+wget -P package/network/config/firewall/patches/ https://github.com/immortalwrt/immortalwrt/raw/master/package/network/config/firewall/patches/fullconenat.patch
+# Patch LuCI 以增添 FullCone 开关
+patch -p1 < ../PATCH/new/package/luci-app-firewall_add_fullcone.patch
+# FullCone 相关组件
+cp -rf ../openwrt-lienol/package/network/fullconenat ./package/network/fullconenat
