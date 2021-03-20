@@ -18,6 +18,19 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-a
 # git clone https://github.com/garypang13/luci-app-eqos.git package/luci-app-eqos
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 
+### Fullcone-NAT 部分 ###
+# Patch Kernel 以解决 FullCone 冲突
+pushd target/linux/generic/hack-5.4
+wget https://github.com/coolsnowwolf/lede/raw/master/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
+popd
+# Patch FireWall 以增添 FullCone 功能 
+mkdir package/network/config/firewall/patches
+wget -P package/network/config/firewall/patches/ https://github.com/immortalwrt/immortalwrt/raw/master/package/network/config/firewall/patches/fullconenat.patch
+# Patch LuCI 以增添 FullCone 开关
+patch -p1 < ../PATCH/new/package/luci-app-firewall_add_fullcone.patch
+# FullCone 相关组件
+cp -rf ../openwrt-lienol/package/network/fullconenat ./package/network/fullconenat
+
 #passwall出国软件
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/package/brook package/brook
