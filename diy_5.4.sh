@@ -26,10 +26,6 @@ popd
 # Patch FireWall 以增添 FullCone 功能 
 mkdir package/network/config/firewall/patches
 wget -P package/network/config/firewall/patches/ https://github.com/immortalwrt/immortalwrt/raw/master/package/network/config/firewall/patches/fullconenat.patch
-# Patch LuCI 以增添 FullCone 开关
-patch -p1 < ../PATCH/new/package/luci-app-firewall_add_fullcone.patch
-# FullCone 相关组件
-cp -rf ../openwrt-lienol/package/network/fullconenat ./package/network/fullconenat
 
 #passwall出国软件
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
