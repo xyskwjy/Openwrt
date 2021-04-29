@@ -8,4 +8,3 @@ sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_genera
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
 rm -rf ./package/lean/luci-app-jd-dailybonus
-rm -rf ./package/lean/luci-theme-argon
