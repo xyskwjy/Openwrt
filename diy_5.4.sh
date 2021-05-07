@@ -22,6 +22,10 @@ git clone https://github.com/project-lede/luci-app-godproxy.git package/luci-app
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 rm -fr feeds/packages/net/miniupnpd
 svn co https://github.com/Ljzkirito/openwrt-packages/trunk/miniupnpd feeds/packages/net/miniupnpd
+rm -rf ./package/lean/luci-app-docker
+svn co https://github.com/Lienol/openwrt/tree/19.07/package/diy/luci-app-dockerman package/luci-app-dockerman
+rm -rf ./package/lean/luci-lib-docker
+svn co https://github.com/coolsnowwolf/lede/tree/master/package/lean/luci-lib-docker package/lean/luci-lib-docker
 
 #passwall出国软件
 # svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
