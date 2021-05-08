@@ -20,16 +20,5 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-a
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 git clone https://github.com/project-lede/luci-app-godproxy.git package/luci-app-godproxy
 # git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-rm -fr feeds/packages/net/miniupnpd
+rm -rf ./feeds/packages/net/miniupnpd
 svn co https://github.com/Ljzkirito/openwrt-packages/trunk/miniupnpd feeds/packages/net/miniupnpd
-rm -rf ./package/lean/luci-app-docker
-git clone https://github.com/lisaac/luci-app-dockerman   package/luci-app-dockerman
-
-#passwall出国软件
-# svn co https://github.com/xiaorouji/openwrt-package/trunk/lienol/luci-app-passwall package/luci-app-passwall
-# svn co https://github.com/xiaorouji/openwrt-package/trunk/package/brook package/brook
-# svn co https://github.com/xiaorouji/openwrt-package/trunk/package/chinadns-ng package/chinadns-ng
-# svn co https://github.com/xiaorouji/openwrt-package/trunk/package/tcping package/tcping
-# svn co https://github.com/xiaorouji/openwrt-package/trunk/package/trojan-go package/trojan-go
-# svn co https://github.com/xiaorouji/openwrt-package/trunk/package/trojan-plus package/trojan-plus
-# svn co https://github.com/xiaorouji/openwrt-package/trunk/package/syncthing package/syncthing
