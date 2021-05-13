@@ -17,5 +17,6 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-a
 rm -rf ./package/lean/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
-rm -rf ./feeds/packages/net/miniupnpd
+cd lede
+rm -fr feeds/packages/net/miniupnpd
 svn co https://github.com/Ljzkirito/openwrt-packages/trunk/miniupnpd feeds/packages/net/miniupnpd
