@@ -20,4 +20,4 @@ git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luc
 rm -fr feeds/packages/net/miniupnpd
 svn co https://github.com/Ljzkirito/openwrt-packages/trunk/miniupnpd feeds/packages/net/miniupnpd
 rm -fr feeds/luci/applications/luci-app-upnp
-svn co https://github.com/Ljzkirito/openwrt-packages/tree/main/luci-app-upnp feeds/luci/applications/luci-app-upnp
+svn co https://github.com/Ljzkirito/openwrt-packages/trunk/luci-app-upnp feeds/luci/applications/luci-app-upnp
