@@ -17,5 +17,3 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-a
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 rm -rf ./package/lean/luci-app-docker
 git clone https://github.com/KFERMercer/luci-app-dockerman package/luci-app-dockerman
-rm -rf ./package/lean/luci-lib-docker
-git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
