@@ -141,7 +141,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X64_5.4_dockerman_adbyby${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X64_5.4_docker_adbyby${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
