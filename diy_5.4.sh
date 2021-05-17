@@ -14,10 +14,8 @@
 #添加自定义插件链接（自己想要什么就github里面搜索然后添加）
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
-rm -rf ./package/lean/luci-app-jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
-# rm -fr ./feeds/packages/net/miniupnpd
-# svn co https://github.com/Ljzkirito/openwrt-packages/trunk/miniupnpd feeds/packages/net/miniupnpd
-# rm -fr ./feeds/luci/applications/luci-app-upnp
-# svn co https://github.com/Ljzkirito/openwrt-packages/trunk/luci-app-upnp feeds/luci/applications/luci-app-upnp
+rm -rf ./package/lean/luci-app-docker
+git clone https://github.com/KFERMercer/luci-app-dockerman package/luci-app-dockerman
+rm -rf ./package/lean/luci-lib-docker
+git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
