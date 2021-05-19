@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_X64_lean4.19
+name: xyskwjy_openwrt_X86_lean5.4
 
 on:
   repository_dispatch:
@@ -141,7 +141,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X64_lean4.19_no_microcode${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X86_lean5.4${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
