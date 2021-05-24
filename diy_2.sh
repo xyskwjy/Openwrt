@@ -12,6 +12,3 @@ rm -fr feeds/packages/net/miniupnpd
 svn co https://github.com/Ljzkirito/openwrt-packages/trunk/miniupnpd feeds/packages/net/miniupnpd
 rm -fr feeds/luci/applications/luci-app-upnp
 svn co https://github.com/Ljzkirito/openwrt-packages/trunk/luci-app-upnp feeds/luci/applications/luci-app-upnp
-
-#关闭 禁止解析 IPv6 DNS 记录
-sed -i 's/option filter_aaaa\t1/option filter_aaaa\t0/g' package/network/services/dnsmasq/files/dhcp.conf
