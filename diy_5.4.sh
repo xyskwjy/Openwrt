@@ -16,11 +16,5 @@ git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverc
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 
-# 使用官方ppp 2.4.9
-rm -rf package/network/services/ppp
-svn co https://github.com/Ljzkirito/openwrt-packages/trunk/ppp package/network/services/ppp
-
 #关闭 禁止解析 IPv6 DNS 记录
 sed -i 's/option filter_aaaa\t1/option filter_aaaa\t0/g' package/network/services/dnsmasq/files/dhcp.conf
-#Remove firewall zone wan6
-sed -i "/wan6/d" package/network/config/firewall/files/firewall.config
