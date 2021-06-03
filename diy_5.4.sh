@@ -18,3 +18,8 @@ git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luc
 
 #关闭 禁止解析 IPv6 DNS 记录
 sed -i 's/option filter_aaaa\t1/option filter_aaaa\t0/g' package/network/services/dnsmasq/files/dhcp.conf
+
+# Add luci-app-dockerman
+rm -rf ../lean/luci-app-docker
+git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
