@@ -21,5 +21,5 @@ sed -i 's/option filter_aaaa\t1/option filter_aaaa\t0/g' package/network/service
 
 # Add luci-app-dockerman
 rm -rf ../lean/luci-app-docker
-git clone --depth=1 https://github.com/KFERMercer/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker
