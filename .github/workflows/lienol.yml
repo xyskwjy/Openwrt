@@ -25,7 +25,7 @@ on:
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: "19.07"
+  REPO_BRANCH: "21.02"
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: lienol.config
   DIY_P1_SH: lienol_1.sh
@@ -141,7 +141,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X64_lienol_19.07nft_adbyby{{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X64_lienol_21.02nft_adbyby{{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
