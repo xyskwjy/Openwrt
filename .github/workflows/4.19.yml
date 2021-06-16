@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_X86_lean5.4
+name: xyskwjy_openwrt_X86_lienol21.02
 
 on:
   repository_dispatch:
@@ -24,8 +24,8 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: "openwrt-18.06-k5.4"
+  REPO_URL: https://github.com/Lienol/openwrt
+  REPO_BRANCH: "21.02"
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: openwrt.config
   DIY_P1_SH: openwrt_1.sh
@@ -141,7 +141,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X86_lean5.4${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X86_lienol21.02${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
