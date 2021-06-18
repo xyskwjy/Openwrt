@@ -12,3 +12,9 @@ git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverc
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
+
+# Add luci-app-dockerman
+rm -rf ../diy/luci-app-dockerman
+rm -rf ../diy/luci-lib-docker
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker
