@@ -16,5 +16,5 @@ git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luc
 # Add luci-app-dockerman
 rm -rf ../diy/luci-app-dockerman
 rm -rf ../diy/luci-lib-docker
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker package/diy/luci-lib-docker
