@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_X86_lienol21.02
+name: xyskwjy_openwrt_X86_lienol5.10
 
 on:
   repository_dispatch:
@@ -25,7 +25,7 @@ on:
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: main
+  REPO_BRANCH: main-test
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: openwrt.config
   DIY_P1_SH: openwrt_1.sh
