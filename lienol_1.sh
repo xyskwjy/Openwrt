@@ -15,9 +15,3 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-a
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 # git clone https://github.com/garypang13/luci-app-dnsfilter package/luci-app-dnsfilter
-
-# Add luci-app-dockerman
-rm -rf package/diy/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman
-rm -rf package/diy/luci-lib-docker
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker
