@@ -6,6 +6,6 @@ sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_genera
 
 # Add luci-app-dockerman
 rm -rf package/diy/luci-app-dockerman
-svn co https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dockerman
 rm -rf package/diy/luci-lib-docker
-svn co https://github.com/lisaac/luci-lib-docker package/diy/luci-lib-docker
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker package/diy/luci-lib-docker
