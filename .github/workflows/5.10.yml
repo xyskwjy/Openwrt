@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_lean_5.10
+name: xyskwjy_openwrt_lienol_5.10
 
 on:
   repository_dispatch:
@@ -24,8 +24,8 @@ on:
 #    types: started
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: "https://github.com/Lienol/openwrt"0
+  REPO_BRANCH: "main"
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: X64.config
   DIY_P1_SH: X64_1.sh
