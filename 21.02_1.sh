@@ -1,9 +1,6 @@
 #!/bin/bash
 # Copyright (c) 2019-2020 P3TERX <https://p3terx
 
-# 设置密码为空
-sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ
-
 # Add luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker package/diy/luci-lib-docker
