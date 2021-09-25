@@ -15,5 +15,5 @@ uci set system.@system[0].zonename=Asia/Shanghai
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ
 
 # Add luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/diy/luci-app-dockerman
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker package/diy/luci-lib-docker
+git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+git clone --depth=1 https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
