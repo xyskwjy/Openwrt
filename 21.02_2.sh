@@ -7,27 +7,25 @@ sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_genera
 cat >$NETIP <<-EOF
 uci set luci.main.lang=zh_cn
 uci commit luci
-uci set system.@system[0].timezone=CST-8
-uci set system.@system[0].zonename=Asia/Shanghai
-uci -q batch
-	delete system.@system[0]
-	add system system
-	set system.@system[-1].hostname='OpenWrt'
-	set system.@system[-1].timezone='UTC'
-	set system.@system[-1].ttylogin='0'
-	set system.@system[-1].log_size='64'
-	set system.@system[-1].urandom_seed='0'
-	delete system.ntp
-	set system.ntp='timeserver'
-	set system.ntp.enabled='1'
-	set system.ntp.enable_server='0'
-	add_list system.ntp.server='0.openwrt.pool.ntp.org'
-	add_list system.ntp.server='1.openwrt.pool.ntp.org'
-	add_list system.ntp.server='2.openwrt.pool.ntp.org'
-	add_list system.ntp.server='3.openwrt.pool.ntp.org'
 EOF
 
-sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ
+uci -q batch <<-EOF
+	set system.@system[0].timezone='CST-8'
+	set system.@system[0].zonename='Asia/Shanghai'
+	delete system.ntp.server
+	add_list system.ntp.server="time1.cloud.tencent.com" 
+	add_list system.ntp.server="time2.cloud.tencent.com" 
+	add_list system.ntp.server="time3.cloud.tencent.com"
+	add_list system.ntp.server="time4.cloud.tencent.com"
+	add_list system.ntp.server="time5.cloud.tencent.com"
+	add_list system.ntp.server="time.apple.com"
+	add_list system.ntp.server="time.asia.apple.com"
+	add_list system.ntp.server="ntp.aliyun.com"
+	add_list system.ntp.server="cn.ntp.org.cn"
+EOF
+uci commit system
+
+sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/emortal/default-settings/files/zzz-default-settings
 
 # Add luci-app-dockerman
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
