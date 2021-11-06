@@ -11,6 +11,7 @@ sed -i 's/option filter_aaaa\t1/option filter_aaaa\t0/g' package/network/service
 #添加自定义插件链接
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
+git clone -b 18.06 https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
 
 # Add luci-app-dockerman
 rm -rf package/lean/luci-app-docker
