@@ -24,12 +24,12 @@ on:
 #    types: started
 
 env:
-  REPO_URL: "https://github.com/immortalwrt/immortalwrt"
-  REPO_BRANCH: "openwrt-21.02"
+  REPO_URL: "https://github.com/coolsnowwolf/lede"
+  REPO_BRANCH: "master"
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 21.02.config
-  DIY_P1_SH: 21.02_1.sh
-  DIY_P2_SH: 21.02_2.sh
+  CONFIG_FILE: leo5.10.config
+  DIY_P1_SH: leo5.10_1.sh
+  DIY_P2_SH: leo5.10_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
