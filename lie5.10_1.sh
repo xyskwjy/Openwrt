@@ -31,3 +31,5 @@ sed -i 's/ddns-scripts_dnspod//g' ./include/target.mk
 sed -i 's/luci-app-control-timewol//g' ./include/target.mk
 sed -i 's/luci-app-control-webrestriction//g' ./include/target.mk
 sed -i 's/luci-app-control-weburl//g' ./include/target.mk
+sed -i 's/luci-app-timecontrol//g' ./include/target.mk
+
