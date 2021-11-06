@@ -27,9 +27,9 @@ env:
   REPO_URL: "https://github.com/Lienol/openwrt"
   REPO_BRANCH: "main"
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: X64.config
-  DIY_P1_SH: X64_1.sh
-  DIY_P2_SH: X64_2.sh
+  CONFIG_FILE: lie_5.10.config
+  DIY_P1_SH: lie5.10_1.sh
+  DIY_P2_SH: lie5.10_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
