@@ -21,11 +21,15 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-a
 git clone -b 18.06 https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
 
 #Remove default apps
-sed -i 's/luci-app-wol //g' include/target.mk
-sed -i 's/luci-app-ddns //g' include/target.mk
-sed -i 's/ddns-scripts-cloudflare //g' include/target.mk
-sed -i 's/ddns-scripts_aliyun //g' include/target.mk
-sed -i 's/ddns-scripts_dnspod //g' include/target.mk
-sed -i 's/luci-app-control-timewol //g' include/target.mk
-sed -i 's/luci-app-control-webrestriction //g' include/target.mk
-sed -i 's/luci-app-control-weburl //g' include/target.mk
+sed -i 's/ddns-scripts_dnspod//g' target/linux/x86/Makefile
+sed -i 's/ddns-scripts_aliyun//g' target/linux/x86/Makefile
+sed -i 's/luci-app-usb-printer//g' target/linux/x86/Makefile
+sed -i 's/luci-app-vsftpd//g' target/linux/x86/Makefile
+sed -i 's/luci-app-wol//g' include/target.mk
+sed -i 's/luci-app-ddns//g' include/target.mk
+sed -i 's/ddns-scripts-cloudflare//g' include/target.mk
+sed -i 's/ddns-scripts_aliyun//g' include/target.mk
+sed -i 's/ddns-scripts_dnspod//g' include/target.mk
+sed -i 's/luci-app-control-timewol//g' include/target.mk
+sed -i 's/luci-app-control-webrestriction//g' include/target.mk
+sed -i 's/luci-app-control-weburl//g' include/target.mk
