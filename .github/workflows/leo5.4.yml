@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_X64_leo5.10
+name: xyskwjy_openwrt_X64_leo5.4
 
 on:
   repository_dispatch:
