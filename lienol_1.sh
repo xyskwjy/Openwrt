@@ -18,6 +18,14 @@ git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
 #添加自定义插件链接（自己想要什么就github里面搜索然后添加）
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
-# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
-# git clone -b 18.06 https://github.com/xiaozhuai/luci-app-filebrowser package/luci-app-filebrowser
 git clone -b 18.06 https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
+
+#Remove default apps
+sed -i 's/luci-app-wol //g' include/target.mk
+sed -i 's/luci-app-ddns //g' include/target.mk
+sed -i 's/ddns-scripts-cloudflare //g' include/target.mk
+sed -i 's/ddns-scripts_aliyun //g' include/target.mk
+sed -i 's/ddns-scripts_dnspod //g' include/target.mk
+sed -i 's/luci-app-control-timewol //g' include/target.mk
+sed -i 's/luci-app-control-webrestriction //g' include/target.mk
+sed -i 's/luci-app-control-weburl //g' include/target.mk
