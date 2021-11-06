@@ -17,3 +17,16 @@ rm -rf package/lean/luci-app-docker
 git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 rm -rf package/lean/luci-lib-docker
 git clone --depth=1 https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
+
+#Remove default apps
+sed -i 's/luci-app-zerotier//g' target/linux/rockchip/Makefile
+sed -i 's/luci-app-vsftpd //g' include/target.mk
+sed -i 's/luci-app-unblockmusic //g' include/target.mk
+sed -i 's/luci-app-wol //g' include/target.mk
+sed -i 's/luci luci-app-ddns //g' include/target.mk
+sed -i 's/luci-app-accesscontrol //g' include/target.mk
+sed -i 's/luci-app-autoreboot //g' include/target.mk
+sed -i 's/luci-app-ssr-plus //g' include/target.mk
+sed -i 's/ddns-scripts_aliyun //g' include/target.mk
+sed -i 's/ddns-scripts_dnspod //g' include/target.mk
+sed -i 's/luci-app-nlbwmon //g' include/target.mk
