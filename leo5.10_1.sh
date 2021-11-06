@@ -15,9 +15,9 @@ git clone -b 18.06 https://github.com/small-5/luci-app-adblock-plus package/luci
 
 # Add luci-app-dockerman
 rm -rf package/lean/luci-app-docker
-git clone --depth=1 https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 rm -rf package/lean/luci-lib-docker
-git clone --depth=1 https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
+git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
 
 #Remove default apps
 sed -i 's/luci-app-zerotier//g' target/linux/rockchip/Makefile
