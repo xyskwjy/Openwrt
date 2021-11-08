@@ -7,7 +7,7 @@
 # 添加软件源
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
-# Add luci-app-dockerman
+# 替换luci-app-dockerman
 rm -rf ./package/diy/luci-app-dockerman
 git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 rm -rf ./package/diy/luci-lib-docker
@@ -19,6 +19,7 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-a
 git clone -b 18.06 https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
 
 #Remove default apps
+rm -rf ./package/diy/OpenAppFilter
 sed -i 's/ddns-scripts_dnspod//g' ./target/linux/x86/Makefile
 sed -i 's/ddns-scripts_aliyun//g' ./target/linux/x86/Makefile
 sed -i 's/luci-app-usb-printer//g' ./target/linux/x86/Makefile
