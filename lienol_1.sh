@@ -10,7 +10,7 @@ sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' ./target/linux/x86/Makef
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # Add luci-app-dockerman
-rm -rf ./package/diy/luci-app-docker
+rm -rf ./package/diy/luci-app-dockerman
 git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 rm -rf ./package/diy/luci-lib-docker
 git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
