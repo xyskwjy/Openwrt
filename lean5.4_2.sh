@@ -15,3 +15,7 @@ rm -fr feeds/packages/net/miniupnpd
 svn co https://github.com/openwrt/packages/trunk/net/miniupnpd feeds/packages/net/miniupnpd
 rm -fr feeds/luci/applications/luci-app-upnp
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
+
+# 更换报错的mac80211
+rm -rf package/kernel/mac80211
+svn co https://github.com/openwrt/luci/trunk/package/kernel/mac80211 package/kernel/mac80211
