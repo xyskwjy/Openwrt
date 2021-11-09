@@ -18,4 +18,4 @@ svn co https://github.com/openwrt/luci/trunk/applications/luci-app-upnp feeds/lu
 
 # 更换报错的mac80211
 rm -rf package/kernel/mac80211
-svn co https://github.com/openwrt/trunk/package/kernel/mac80211 package/kernel/mac80211
+svn co https://github.com/openwrt/openwrt/trunk/package/kernel/mac80211 package/kernel/mac80211
