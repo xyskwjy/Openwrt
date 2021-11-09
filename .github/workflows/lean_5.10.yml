@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_X64_lean5.4
+name: xyskwjy_openwrt_X64_lean5.10
 
 on:
   repository_dispatch:
@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: lean5.4.config
-  DIY_P1_SH: lean5.4_1.sh
-  DIY_P2_SH: lean5.4_2.sh
+  CONFIG_FILE: lean5.10.config
+  DIY_P1_SH: lean5.10_1.sh
+  DIY_P2_SH: lean5.10_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: true
@@ -126,7 +126,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X64_lean_5.4_newupnp${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X64_lean_5.10_newupnp${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to WeTransfer
