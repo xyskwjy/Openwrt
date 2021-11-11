@@ -19,7 +19,7 @@ sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' ./target/linux/x86/Makef
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
 # git clone -b 18.06 https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
-git clone https://github.com/kiddin9/luci-app-dnsfilter package/luci-app-dnsfilter
+# git clone https://github.com/kiddin9/luci-app-dnsfilter package/luci-app-dnsfilter
 
 #Remove default apps
 sed -i 's/ddns-scripts_dnspod//g' target/linux/x86/Makefile
