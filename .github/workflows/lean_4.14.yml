@@ -20,12 +20,12 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/coolsnowwolf/openwrt
+  REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: lean5.10.config
-  DIY_P1_SH: lean5.10_1.sh
-  DIY_P2_SH: lean5.10_2.sh
+  CONFIG_FILE: lean4.14.config
+  DIY_P1_SH: lean4.14_1.sh
+  DIY_P2_SH: lean4.14_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_WETRANSFER: true
