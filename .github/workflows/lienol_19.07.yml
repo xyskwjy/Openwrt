@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_X64_lienol
+name: xyskwjy_openwrt_X64_lienol_19.07
 
 on:
   repository_dispatch:
@@ -27,7 +27,7 @@ env:
   REPO_URL: https://github.com/Lienol/openwrt
   REPO_BRANCH: "19.07"
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: lienol.config
+  CONFIG_FILE: lienol_19.07.config
   DIY_P1_SH: lienol_1.sh
   DIY_P2_SH: lienol_2.sh
   UPLOAD_BIN_DIR: false
