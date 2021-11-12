@@ -28,8 +28,8 @@ env:
   REPO_BRANCH: "19.07"
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: lienol_19.07.config
-  DIY_P1_SH: lienol_1.sh
-  DIY_P2_SH: lienol_2.sh
+  DIY_P1_SH: lienol_19.07_1.sh
+  DIY_P2_SH: lienol_19.07_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
