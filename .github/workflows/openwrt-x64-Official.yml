@@ -24,7 +24,7 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: openwrt-x64-Official.config
+  CONFIG_FILE: Official.config
   DIY_P1_SH: Official1.sh
   DIY_P2_SH: Official2.sh
   UPLOAD_BIN_DIR: false
