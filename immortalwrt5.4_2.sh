@@ -9,9 +9,6 @@
 # File name: immortalwrt5.4_2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 
-# 版本号里显示一个自己的名字
-sed -i "s/OpenWrt/xywjy build $(TZ=UTC-8 date "+%y.%m.%d") @/g" package/emortal/default-settings/files/zzz-default-settings
-
 # 设置密码为空
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/emortal/default-settings/files/zzz-default-settings
 
