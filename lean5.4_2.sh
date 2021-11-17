@@ -9,31 +9,24 @@
 # File name: diy-part02.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 
+# 设置密码为空
+sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_generate
 
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
-# themes添加（svn co 命令意思：指定版本如https://github）
-# git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
-# git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
-# git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
+##替换docker
+rm -rf package/lean/luci-lib-docker
+git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
+rm -rf package/lean/luci-app-docker
+git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 
 #添加额外软件包
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
-# git clone https://github.com/kiddin9/luci-app-xlnetacc.git package/luci-app-xlnetacc
-# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
-git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
-git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
-
-
-#添加smartdns
-# git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
-# git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
-
-
