@@ -22,7 +22,7 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 # rm -rf package/lean/luci-lib-docker
 # git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
 # rm -rf package/lean/luci-app-docker
-git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+# git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 
 #添加额外软件包
 # git clone https://github.com/vernesong/OpenClash.git package/OpenClash
