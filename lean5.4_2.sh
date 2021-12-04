@@ -24,8 +24,3 @@ svn co https://github.com/openwrt/packages/trunk/openwrt-18.06/net/miniupnpd fee
 rm -fr feeds/luci/applications/luci-app-upnp
 svn co https://github.com/openwrt/luci/trunk/openwrt-18.06/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
 
-#添加额外软件包
-# git clone https://github.com/vernesong/OpenClash.git package/OpenClash
-# git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
-git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
-git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
