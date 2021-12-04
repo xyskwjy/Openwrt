@@ -18,11 +18,11 @@ sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_genera
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
-##替换docker
-# rm -rf package/lean/luci-lib-docker
-# git clone https://github.com/lisaac/luci-lib-docker package/luci-lib-docker
-# rm -rf package/lean/luci-app-docker
-# git clone https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
+# 更新miniupnp版本
+rm -fr feeds/packages/net/miniupnpd
+svn co https://github.com/openwrt/packages/trunk/openwrt-18.06/net/miniupnpd feeds/packages/net/miniupnpd
+rm -fr feeds/luci/applications/luci-app-upnp
+svn co https://github.com/openwrt/luci/trunk/openwrt-18.06/applications/luci-app-upnp feeds/luci/applications/luci-app-upnp
 
 #添加额外软件包
 # git clone https://github.com/vernesong/OpenClash.git package/OpenClash
