@@ -29,3 +29,6 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/l
 
 # 去除默认软件
 sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
+
+# 去除dockerd校验
+sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/' feeds/packages/utils/dockerd/Makefile
