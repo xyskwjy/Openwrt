@@ -18,8 +18,8 @@
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # 使用官方ppp 
-rm -rf package/network/services/ppp
-svn co https://github.com/openwrt/openwrt/trunk/package/network/services/ppp package/network/services/ppp
+# rm -rf package/network/services/ppp
+# svn co https://github.com/openwrt/openwrt/trunk/package/network/services/ppp package/network/services/ppp
 
 # Add luci-app-dockerman
 # rm -rf package/lean/luci-app-docker package/lean/luci-lib-docker
@@ -33,4 +33,4 @@ git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-ap
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 # 去除默认软件
-sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
+# sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
