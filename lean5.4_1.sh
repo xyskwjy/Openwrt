@@ -18,8 +18,8 @@
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # 使用官方ppp 
-# rm -rf package/network/services/ppp
-# svn co https://github.com/openwrt/openwrt/trunk/package/network/services/ppp package/network/services/ppp
+rm -rf package/network/services/ppp
+svn co https://github.com/openwrt/openwrt/trunk/package/network/services/ppp package/network/services/ppp
 
 #添加额外软件包
 # git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
