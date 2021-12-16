@@ -25,4 +25,4 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 # svn co https://github.com/Ljzkirito/openwrt-packages/trunk/luci-app-upnp feeds/luci/applications/luci-app-upnp
 
 # 去除dockerd校验
-# sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/g' feeds/packages/utils/dockerd/Makefile
+sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/g' feeds/packages/utils/dockerd/Makefile
