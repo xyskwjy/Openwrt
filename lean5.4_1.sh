@@ -11,7 +11,7 @@
 #
 
 # 内核
-# sed -i 's/KERNEL_PATCHVER:=4.19/KERNEL_PATCHVER:=4.14/g' ./target/linux/x86/Makefile
+# sed -i 's/KERNEL_PATCHVER:=5.4/KERNEL_PATCHVER:=5.10/g' ./target/linux/x86/Makefile
 
 # Uncomment a feed source
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
@@ -31,5 +31,5 @@ git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-ap
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 # 去除默认软件
-# sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
+sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
 
