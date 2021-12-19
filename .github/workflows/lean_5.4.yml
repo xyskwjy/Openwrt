@@ -126,7 +126,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: xywjy_lean5.4_docker${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: xywjy_lean5.10_docker${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
