@@ -23,4 +23,3 @@ git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/l
 # 去除默认软件
 sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
 
-# rm -rf package/lean/r8152/patches/010-compat-skb_mark_not_on_list-was-backported-since-ker.patch
