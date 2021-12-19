@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright (c) 2019-2020 P3TERX <https://p3terx
 
-# sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' ./target/linux/x86/Makefile
 
 # 取消掉feeds.conf.default文件里面的helloworld的注释，使用源码自带ShadowSocksR Plus+出国软件
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
