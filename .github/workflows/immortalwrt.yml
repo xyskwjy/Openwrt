@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xyskwjy_openwrt_X64_immortalwrt5.4
+name: xyskwjy_openwrt_X64_immortalwrt
 
 on:
   repository_dispatch:
@@ -27,9 +27,9 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-18.06
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: immortalwrt5.4.config
-  DIY_P1_SH: immortalwrt5.4_1.sh
-  DIY_P2_SH: immortalwrt5.4_2.sh
+  CONFIG_FILE: immortalwrt.config
+  DIY_P1_SH: immortalwrt_1.sh
+  DIY_P2_SH: immortalwrt_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
