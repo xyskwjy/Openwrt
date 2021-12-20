@@ -127,7 +127,7 @@ jobs:
         find -name "*.buildinfo*" | xargs -i mv -f {} packages
         find -name "*.bin*" | xargs -i mv -f {} packages
         find -name "*rootfs.img*" | xargs -i mv -f {} packages                
-        find -name "*ext4*" | xargs -i mv -f {} packages
+        find -name "*efi*" | xargs -i mv -f {} packages
         find -name "*.tar*" | xargs -i mv -f {} packages
         rm -rf packages  
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
