@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xywjy_openwrt_lean5.4
+name: xywjy_openwrt_lean
 
 on:
   repository_dispatch:
@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: lean5.4.config
-  DIY_P1_SH: lean5.4_1.sh
-  DIY_P2_SH: lean5.4_2.sh
+  CONFIG_FILE: lean.config
+  DIY_P1_SH: lean_1.sh
+  DIY_P2_SH: lean_2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
