@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: xywjy_openwrt_lean
+name: Build__lean
 
 on:
   repository_dispatch:
