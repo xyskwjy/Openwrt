@@ -25,7 +25,7 @@ on:
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-18.06-k5.4
+  REPO_BRANCH: openwrt-18.06
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: immortalwrt5.4.config
   DIY_P1_SH: immortalwrt5.4_1.sh
@@ -136,7 +136,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X64_immortalwrt5.4_dnsfilter${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X64_immortalwrt4.14_dnsfilter${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
