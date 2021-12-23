@@ -17,7 +17,7 @@ sed -i 's/KERNEL_TESTING_PATCHVER:=5.4/KERNEL_TESTING_PATCHVER:=5.10/g' ./target
 #添加额外软件包
 # git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/lean/openwrt-iptvhelper
-git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-app-dnsfilter
+# git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-app-dnsfilter
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 # 去除默认软件
