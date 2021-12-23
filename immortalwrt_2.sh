@@ -6,7 +6,7 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: immortalwrt5.4_2.sh
+# File name: immortalwrt_2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 
 # 设置密码为空
