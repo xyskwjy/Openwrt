@@ -21,6 +21,6 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 #添加额外非必须软件包
 # git clone https://github.com/vernesong/OpenClash.git package/OpenClash
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
-git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
+# git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
 
