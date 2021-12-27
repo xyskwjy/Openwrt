@@ -9,7 +9,7 @@
 # File name: Lie_1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 
-sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' ./target/linux/x86/Makefile
+# sed -i 's/KERNEL_PATCHVER:=4.9/KERNEL_PATCHVER:=4.14/g' ./target/linux/x86/Makefile
 
 # 取消掉feeds.conf.default文件里面的helloworld的注释，使用源码自带ShadowSocksR Plus+出国软件
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
