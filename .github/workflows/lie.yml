@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/lienol/openwrt.git
-  REPO_BRANCH: main
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Lie.config
   DIY_P1_SH: Lie_1.sh
@@ -129,7 +129,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: OpenWrt_wjy_X64_lie_5.10${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: OpenWrt_wjy_X64_lie_5.15${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
