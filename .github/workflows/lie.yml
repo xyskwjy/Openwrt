@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/lienol/openwrt.git
-  REPO_BRANCH: master
+  REPO_BRANCH: 22.03
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Lie.config
   DIY_P1_SH: Lie_1.sh
