@@ -10,10 +10,8 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-
 # 修改版本内核
 # sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.18/g' ./target/linux/x86/Makefile
-# sed -i 's/KERNEL_TESTING_PATCHVER:=5.15/KERNEL_TESTING_PATCHVER:=5.18/g' ./target/linux/x86/Makefile
 
 #添加额外软件包
 # git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
