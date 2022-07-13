@@ -55,9 +55,8 @@ jobs:
         ./scripts/feeds install -a
         cp -f ../lean_2.sh ./        
         chmod +x ./lean_2.sh && ./lean_2.sh
-        
-        sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.18/g' ./target/linux/x86/Makefile      
-        sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='Linux-OP5.18-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings
+           
+        sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='Linux-OP5.15-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings
         
     - name: Configuration Customization - Build_Linux-op_515
       env:
