@@ -21,7 +21,4 @@ sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_genera
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
-# 去除默认软件
-sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
-sed -i 's/kmod-igb-intel//g' target/linux/x86/Makefile
 
