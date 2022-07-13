@@ -1,4 +1,4 @@
-name: Build_x86_515_lite
+name: Build_Linux_op_5.18
 
 on: 
   repository_dispatch:
@@ -37,7 +37,6 @@ jobs:
         wget -qO - https://raw.githubusercontent.com/xyskwjy/jn/main/install.sh | sed 's/python-/python3-/g' | /bin/bash
         pip install aligo
         sudo -E apt-get clean
-        git config --global user.name 'GitHub Actions' && git config --global user.email 'noreply@github.com'
         df -h
         
     - name: Clone source code
@@ -47,22 +46,22 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        cp -f ../diy/lean/lean1.sh ./
-        chmod +x ./lean1.sh && ./lean1.sh
+        cp -f ../L5.18.1.sh ./
+        chmod +x ./L5.18.1.sh && ./L5.18.1.sh
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        cp -f ../diy/lean/lean2.sh ./        
-        chmod +x ./lean2.sh && ./lean2.sh 
+        cp -f ../L5.18.2.sh ./        
+        chmod +x ./L5.18.2.sh && ./L5.18.2.sh
         
-        sed -i "s/KERNEL_PATCHVER:=*.*/KERNEL_PATCHVER:=5.15/g" target/linux/x86/Makefile      
-        sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='AE86Wrt-X86-Lite-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings
+        sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.18/g' ./target/linux/x86/Makefile      
+        sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='Linux-OP5.18-$(date +%Y%m%d)'/g" package/lean/default-settings/files/zzz-default-settings
         
-    - name: Configuration Customization - Build_x86_515_lite
+    - name: Configuration Customization - Build_Linux-op_518
       env:
-        CONFIG_FILE: './configs/X86/Lite/x86_515_lite.config'
+        CONFIG_FILE: './L5.18.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         cd openwrt && make defconfig
@@ -80,8 +79,8 @@ jobs:
     - name: Assemble Artifact
       id: assemble_artifact
       run: |
-        rm -rf ./X86_Out
-        mkdir -p ./X86_Out/
+        rm -rf ./LinuxOp_Out
+        mkdir -p ./LinuxOp_Out/
         
         getmd5()
         {
@@ -90,43 +89,27 @@ jobs:
         md5=`echo ${md5:0:10}`
         }
         
-        rom=openwrt/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined-efi.img.gz
+        rom=openwrt/bin/targets/x86/64/openwrt-x86-64-generic-squashfs-combined.img.gz
         getmd5 $rom
-        cp -a $rom ./X86_Out/AE86Wrt-X86_64-Lite-5.15-$(date +%Y%m%d)_${md5}.img.gz
+        cp -a $rom ./LinuxOp_Out/Linux-OP-5.18-$(date +%Y%m%d)_${md5}.img.gz
                
     - name: Upload Firmwares
       uses: actions/upload-artifact@main
       with:
-        name: X86-OpenWrt-5.15-lite
-        path: X86_Out/*.img.gz
+        name: Linux-OP-5.18
+        path: LinuxOp_Out/*.img.gz
 
     - name: Upload config
       uses: actions/upload-artifact@main
       with:
-        name: x86-5.15-lite-config
+        name: L5.18.config
         path: openwrt/.config
-        
-    - name: Generate Tag & Release Name
-      id: generate_name
+                                 
+    - name: Upload firmware to WeTransfer
+      id: wetransfer
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
-        time=$(date +%Y%m%d%H%M)
-        release_tag="$time"
-        release_name="软路由(X86_64)精简版-OpenWrt-5.15内核-$(date +%Y%m%d)"
-        echo "##[set-output name=release_name;]$release_name"
-        echo "##[set-output name=release_tag;]$release_tag"        
-    - name: Create Release & Upload
-      uses: ncipollo/release-action@v1
-      with:
-        artifacts: X86_Out/*.img.gz 
-        name: ${{ steps.generate_name.outputs.release_name }}
-        tag: ${{ steps.generate_name.outputs.release_tag }}
-        token: ${{ secrets.GITHUB_TOKEN }}
-                         
-    - name: Upload Aliyun
-      run: |  
-        cd X86_Out
-        echo "请自动忽略META-INF文件夹。" > 忽略META-INF文件夹.txt
-        jar cf X86-Lite-5.15-$(date +%Y%m%d).zip *
-        cd ..        
-        python diy/aliupload.py --token "${{ secrets.ALIYUN_TOKEN }}" --uploadFloder "OpenWrt/X86-Lite/5.15" --file "X86_Out/X86-Lite-5.15-$(date +%Y%m%d).zip"  
-                
+        curl -fsSL git.io/file-transfer | sh
+        ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
+        echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
+        echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
