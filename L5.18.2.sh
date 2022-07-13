@@ -23,4 +23,3 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 
 # 去除默认软件
 sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
-sed -i 's/kmod-igb-intel//g' target/linux/x86/Makefile
