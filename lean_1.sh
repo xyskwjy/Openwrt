@@ -19,5 +19,8 @@
 # git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-app-dnsfilter
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
+# 去除默认软件
+sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
+sed -i 's/kmod-igb-intel//g' target/linux/x86/Makefile
 
 
