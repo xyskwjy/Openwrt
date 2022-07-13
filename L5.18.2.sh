@@ -12,7 +12,6 @@
 # 设置密码为空
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/lean/default-settings/files/zzz-default-settings
 
-sed -i "s/DISTRIB_DESCRIPTION='OpenWrt '/DISTRIB_DESCRIPTION='Linux-OP '/g" ./package/lean/default-settings/files/zzz-default-settings
 sed -i "s/hostname='OpenWrt'/hostname='Linux-op'/g" ./package/base-files/files/bin/config_generate
 
 # Modify default IP
@@ -21,5 +20,3 @@ sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_genera
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
 
-# 去除默认软件
-sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
