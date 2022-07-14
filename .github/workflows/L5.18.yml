@@ -110,6 +110,6 @@ jobs:
       run: |
         cd LinuxOp_Out   
         curl -fsSL git.io/file-transfer | sh
-        ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
+        ./transfer wet -s -p 16 --file "LinuxOp_Out/Linux-OP-5.18-$(date +%Y%m%d).zip | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
