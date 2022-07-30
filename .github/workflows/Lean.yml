@@ -12,9 +12,6 @@ on:
 #  watch:
 #    types: [started]
 
-env:
-  UPLOAD_WETRANSFER: true
-
 jobs:
   Build_Linux_op_515:
     runs-on: ubuntu-20.04
@@ -103,10 +100,9 @@ jobs:
                                  
     - name: Upload firmware to WeTransfer
       id: wetransfer
-      if: steps.assemble_artifact.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
         curl -fsSL git.io/file-transfer | sh
-        ./transfer wet -s -p 16 --no-progress ${LinuxOp_Out} 2>&1 | tee wetransfer.log
+        ./transfer wet -s -p 16 --no-progress ${Linux-OP-5.15} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
 
