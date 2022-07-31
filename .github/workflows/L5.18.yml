@@ -24,7 +24,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: L5.18.config
-  DIY_P1_SH: L5.18.sh
+  DIY_P1_SH: L5.18.1.sh
   DIY_P2_SH: L5.18.2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -137,7 +137,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: xywjy_lean5.15_docker${{ env.FILE_DATE }}
+        name: xywjy_lean5.18_docker${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
