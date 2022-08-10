@@ -11,7 +11,7 @@
 #
 
 # 修改版本内核
-sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.18/g' ./target/linux/x86/Makefile
+sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.19/g' ./target/linux/x86/Makefile
 
 #添加额外软件包
 # git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
@@ -20,4 +20,4 @@ sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=5.18/g' ./target/linux/x86/Make
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 # 去除默认软件
-sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
+# sed -i 's/luci-app-wireguard//g' target/linux/x86/Makefile
