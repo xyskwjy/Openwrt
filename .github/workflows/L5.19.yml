@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build__L5.18
+name: Build__L5.19
 
 on:
   repository_dispatch:
@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: L5.18.config
-  DIY_P1_SH: L5.18.1.sh
-  DIY_P2_SH: L5.18.2.sh
+  CONFIG_FILE: L5.19.config
+  DIY_P1_SH: L5.19.1.sh
+  DIY_P2_SH: L5.19.2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
