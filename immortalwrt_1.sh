@@ -17,3 +17,9 @@ sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Make
 # Add a feed source
 # echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+#添加额外非必须软件包
+# git clone https://github.com/vernesong/OpenClash.git package/OpenClash
+# git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
+# git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
