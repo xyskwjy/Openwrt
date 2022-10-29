@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build__L5.19
+name: Build__L6.0
 
 on:
   repository_dispatch:
@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/xyskwjy/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: L5.19.config
-  DIY_P1_SH: L5.19.1.sh
-  DIY_P2_SH: L5.19.2.sh
+  CONFIG_FILE: L6.0.config
+  DIY_P1_SH: L6.0.1.sh
+  DIY_P2_SH: L6.0.2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
