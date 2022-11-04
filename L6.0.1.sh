@@ -16,7 +16,7 @@ sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=6.0/g' ./target/linux/x86/Makef
 #添加额外软件包
 # git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/lean/openwrt-iptvhelper
-git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-app-dnsfilter
+# git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-app-dnsfilter
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 
