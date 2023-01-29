@@ -23,9 +23,9 @@ env:
   REPO_URL: https://github.com/xyskwjy/lede.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: L6.0.config
-  DIY_P1_SH: L6.0.1.sh
-  DIY_P2_SH: L6.0.2.sh
+  CONFIG_FILE: L6.1.config
+  DIY_P1_SH: L6.1.1.sh
+  DIY_P2_SH: L6.1.2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
