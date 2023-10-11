@@ -11,7 +11,7 @@
 
 # 设置密码为空
 sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/emortal/default-settings/files/99-default-settings
-sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='Linux-IOP5.15-$(date +%Y%m%d)'/g" package/emortal/default-settings/files/99-default-settings
+sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='Linux-IOP6.1-$(date +%Y%m%d)'/g" package/emortal/default-settings/files/99-default-settings
 sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=''/g" package/emortal/default-settings/files/99-default-settings
 sed -i "s/hostname='OpenWrt'/hostname='Linux-op'/g" ./package/base-files/files/bin/config_generate
 
