@@ -6,14 +6,17 @@
 # See /LICENSE for more information.
 #
 # https://github.com/P3TERX/Actions-OpenWrt
-# File name: Lie_2.sh
+# File name: immortalwrt_2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 
-# 修改openwrt登陆地址,把下面的192.168.2.2修改成你想要的就可以了，其他的不要动
-# sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_generate
+# 设置密码为空
+sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' package/emortal/default-settings/files/99-default-settings
+sed -i "s/DISTRIB_DESCRIPTION='*.*'/DISTRIB_DESCRIPTION='Linux-IOP6.1-$(date +%Y%m%d)'/g" package/emortal/default-settings/files/99-default-settings
+sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION=''/g" package/emortal/default-settings/files/99-default-settings
+sed -i "s/hostname='OpenWrt'/hostname='Linux-op'/g" ./package/base-files/files/bin/config_generate
 
-# 版本号里显示一个自己的名字
-sed -i "s/OpenWrt/xywjy build $(TZ=UTC-8 date "+%y.%m.%d") @/g" package/default-settings/files/zzz-default-settings
+# Modify default IP
+sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_generate
 
 #修正连接数（by ベ七秒鱼ベ）
 sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' package/base-files/files/etc/sysctl.conf
