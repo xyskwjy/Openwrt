@@ -17,7 +17,7 @@
 # git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/lean/openwrt-iptvhelper
 # git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/lean/luci-app-dnsfilter
-git clone https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
+# git clone https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 
