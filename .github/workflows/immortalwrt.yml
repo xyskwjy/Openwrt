@@ -151,7 +151,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: Linux-IOP-5.15${{ env.FILE_DATE }}
+        name: Linux-IOP-6.1${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
