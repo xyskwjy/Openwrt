@@ -83,16 +83,13 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
         
     - name: Clean feeds
-      run: cd openwrt
-           ./scripts/feeds clean
+      run: cd openwrt && ./scripts/feeds clean
 
     - name: Update feeds
-      run: cd openwrt
-           ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
-      run: cd openwrt
-           ./scripts/feeds install -a
+      run: cd openwrt && ./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
