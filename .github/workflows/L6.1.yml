@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build__L5.15
+name: Build__L6.6
 
 on:
   repository_dispatch:
@@ -154,7 +154,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: Linux-OP-5.15${{ env.FILE_DATE }}
+        name: Linux-OP-6.6${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
     - name: Upload firmware to cowtransfer
