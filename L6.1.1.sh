@@ -14,6 +14,7 @@
 # sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
 
 #添加额外软件包
+echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 # git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/lean/openwrt-iptvhelper
 # git clone https://github.com/tty228/luci-app-wechatpush.git package/luci-app-wechatpush
