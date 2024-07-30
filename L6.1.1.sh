@@ -15,7 +15,7 @@
 
 #添加额外软件包
 # echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
-# git clone https://github.com/vernesong/OpenClash.git package/lean/OpenClash
+git clone https://github.com/kongfl888/luci-app-adguardhome.git package/lean/luci-app-adguardhome
 # git clone https://github.com/riverscn/openwrt-iptvhelper.git package/lean/openwrt-iptvhelper
 git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
