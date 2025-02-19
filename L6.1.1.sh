@@ -18,5 +18,5 @@
 # git clone git clone -b main https://github.com/ilxp/luci-app-ikoolproxy.git package/lean/luci-app-ikoolproxy
 # git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
-git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
+# git clone https://github.com/sirpdboy/luci-app-eqosplus package/luci-app-eqosplus
 
