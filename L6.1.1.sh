@@ -14,7 +14,7 @@
 # sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
 
 #添加额外软件包
-# git clone https://github.com/kongfl888/luci-app-adguardhome.git package/lean/luci-app-adguardhome
+git clone https://github.com/tty228/luci-app-wechatpush.git package/lean/luci-app-wechatpush
 # git clone git clone -b main https://github.com/ilxp/luci-app-ikoolproxy.git package/lean/luci-app-ikoolproxy
 # git clone https://github.com/kiddin9/luci-app-dnsfilter.git package/luci-app-dnsfilter
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/lean/luci-app-poweroff
