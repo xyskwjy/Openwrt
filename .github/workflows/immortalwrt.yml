@@ -8,8 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build__I6.6
-
+name: Build__I6.12
 on:
   repository_dispatch:
   workflow_dispatch:
