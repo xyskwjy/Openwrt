@@ -20,6 +20,6 @@
 
 #添加额外非必须软件包
 # git clone https://github.com/vernesong/OpenClash.git package/OpenClash
-# git clone https://github.com/riverscn/openwrt-iptvhelper.git package/openwrt-iptvhelper
+git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
 git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
 git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
