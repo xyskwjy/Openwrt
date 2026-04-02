@@ -19,7 +19,8 @@
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 #添加额外非必须软件包
-# git clone https://github.com/vernesong/OpenClash.git package/OpenClash
-git clone https://github.com/timsaya/openwrt-bandix.git package/openwrt-bandix
-git clone https://github.com/timsaya/luci-app-bandix.git package/luci-app-bandix
-git clone https://github.com/esirplayground/luci-app-poweroff.git package/luci-app-poweroff
+# git clone https://github.com/vernesong/OpenClash.git package/diy/OpenClash
+git clone -b main https://github.com/ilxp/luci-app-ikoolproxy.git package/diy/luci-app-ikoolproxy
+git clone https://github.com/timsaya/openwrt-bandix.git package/diy/openwrt-bandix
+git clone https://github.com/timsaya/luci-app-bandix.git package/diy/luci-app-bandix
+git clone https://github.com/esirplayground/luci-app-poweroff.git package/diy/luci-app-poweroff
