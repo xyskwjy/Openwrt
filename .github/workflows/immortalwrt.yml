@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build__I6.12
+name: Build__immortalwrt
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -144,6 +144,7 @@ jobs:
         find -name "*.buildinfo*" | xargs -i mv -f {} packages
         find -name "*.bin*" | xargs -i mv -f {} packages
         find -name "*rootfs*" | xargs -i mv -f {} packages
+        find -name "*targz*" | xargs -i mv -f {} packages
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
