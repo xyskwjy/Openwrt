@@ -14,6 +14,7 @@
 # sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.15/g' ./target/linux/x86/Makefile
 
 #添加额外软件包
+git clone https://github.com/vernesong/OpenClash.git package/diy/OpenClash
 git clone https://github.com/sirpdboy/luci-app-timecontrol.git package/diy/luci-app-timecontrol
 git clone -b main https://github.com/ilxp/luci-app-ikoolproxy.git package/diy/luci-app-ikoolproxy
 git clone https://github.com/timsaya/openwrt-bandix.git package/diy/openwrt-bandix
