@@ -23,4 +23,3 @@ git clone https://github.com/sirpdboy/luci-app-parentcontrol.git package/diy/luc
 git clone https://github.com/timsaya/openwrt-bandix.git package/diy/openwrt-bandix
 git clone https://github.com/timsaya/luci-app-bandix.git package/diy/luci-app-bandix
 git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/diy/luci-app-poweroffdevice
-git clone https://github.com/lisaac/luci-app-dockerman.git package/diy/luci-app-dockerman
